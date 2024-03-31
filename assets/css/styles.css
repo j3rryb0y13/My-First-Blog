@@ -3,12 +3,13 @@ body {
   --background-color: white;
   --text-color: black;
   --button-text-color: var(--background-color);
-  --transition-delay: .25s;
+  --transition-delay: .5s;
 
   display: flex;
   justify-content: flex-end; 
   align-items: center;
 
+  transition: var(--transition-delay);
   background-color: var(--background-color);
   color: var(--text-color);
 }
