@@ -20,13 +20,15 @@ body.dark {
   --text-color: white; 
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .theme-toggle-button {
   background: var(--accent-color);
   color: var(--button-text-color);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   padding: .5em 1em;
   border-radius: .3em;
@@ -34,9 +36,24 @@ body.dark {
   outline:none;
   transition: var(--transition-delay);
   transform: scale(1);
+  margin-bottom: 5px;
 }
 
+.theme-toggle-button .icon {
+  margin-right: .5em;
+}
 .theme-toggle-button:hover,
 .theme-toggle-button:focus{
   transform: scale(1.1);
+}
+
+.horizontal-line {
+  width: 100vw;
+  height: 3px; 
+  background-color: var(--accent-color); 
+  margin-bottom: 2px;
+}
+
+body.dark .horizontal-line {
+  background-color: var(--text-color); 
 }
