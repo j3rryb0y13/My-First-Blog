@@ -37,3 +37,22 @@ spans.forEach((span,idx) => {
     span.classList.add('active');
   }, 750 * (idx+1))
 });
+
+document.getElementById('blog-form').addEventListener('submit', function(event){
+  event.preventDefault();
+
+  var username = document.getElementById('username').value;
+  var title = document.getElementById('title').value;
+  var content = document.getElementById('content').value;
+   
+  var blogPost = {
+    username: username,
+    title: title,
+    content: content,
+    date: new Date().toISOString(title, JSON.stringify(blogPost))
+    };
+
+    localStorage.setItem(title, JSON.stringify(blogPost));
+
+    window.location.href = 'posts.html';
+})
