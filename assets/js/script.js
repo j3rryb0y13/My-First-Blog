@@ -21,3 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggleButton.computedStyleMap.transform = 'scale(1)'
   }
 });
+
+const spans = document.querySelectorAll ('.word span');
+
+spans.forEach((span,idx) => {
+  span.addEventListener('click', (e) =>{
+    e.target.classList.add('active');
+  });
+  span.addEventListener('animationed', (e) => {
+    e.target.classList.remove('active');
+  });
+
+  //Initial animal
+  setTimeout(() => {
+    span.classList.add('active');
+  }, 750 * (idx+1))
+});
