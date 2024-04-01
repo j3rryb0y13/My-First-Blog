@@ -54,47 +54,37 @@ body.dark .horizontal-line {
   background-color: var(--text-color); 
 }
 
-.First-blog {
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
+/* Main Section Styles */
 main {
   display: flex;
   height: 100vh;
   justify-content: center;
+  align-items: center; /* Align vertically */
 }
 
-.word {
+/* Left and Right Section Styles */
+.left-section, .right-section {
   display: flex;
-  font-size: 24px;
+  justify-content: center;
+  align-items: center; /* Align items in the center of each section */
+  flex: 1; /* Each section takes equal space */
 }
 
-.word span {
-  margin: 0 5px;
-  align-self: center;
-}
-
-.vertical-line-container {
-  display: flex;
-  align-items: center;
-}
-
+/* Vertical Line Styles - if existing styles are suitable, keep them */
 .vertical-line {
   width: 5px;
   height: 100%;
-  background-color: var(--accent-color);
-  margin: 0 10px;
-}
-
-body.dark .vertical-line {
   background-color: var(--text-color);
+  margin: 0 20px; /* Increase margin for visual separation */
 }
 
-.info {
-  flex: 1;
+/* Text Alignment and Spacing */
+.word, .info {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+}
+
+.word span, .info p {
+  margin: 0 5px; /* Adjust margins as needed for spacing */
 }
