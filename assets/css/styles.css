@@ -91,6 +91,12 @@ main {
   line-height: .8;
 }
 
+.info {
+  text-align: center; 
+  margin-bottom: 20px; 
+  font-size: 1.2em; 
+}
+
 /* Text Alignment and Spacing */
 .word, .info {
   display: flex;
@@ -208,4 +214,27 @@ main {
   30%, 60% {
     transform: rotate(45deg);
   }
+}
+
+
+/* Styles for the form */
+#blog-form {
+  max-width: 750px;
+  margin: auto; 
+}
+
+#blog-form input[type="text"],
+#blog-form textarea {
+  width: 100%; /* Full width of the form */
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+#blog-form button[type="submit"] {
+  width: 100%; /* Full width of the form */
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box; 
+  background-color: var(--accent-color);
 }
