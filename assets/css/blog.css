@@ -18,8 +18,25 @@ body.dark {
 
 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
+}
+
+.button-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  background-color: #f4fafa;
+  color: #333;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
 }
 
 .theme-toggle-button {
@@ -32,7 +49,12 @@ body.dark {
   outline:none;
   transition: var(--transition-delay);
   transform: scale(1);
-  margin-bottom: 5px;
+
+  text-align: center;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .theme-toggle-button .icon {
@@ -47,7 +69,7 @@ body.dark {
   width: 100%;
   height: 3px; 
   background-color: var(--accent-color); 
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 body.dark .horizontal-line {
