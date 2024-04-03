@@ -54,5 +54,5 @@ document.getElementById('blog-form').addEventListener('submit', function(event){
 
     localStorage.setItem(title, JSON.stringify(blogPost));
 
-    window.location.href = 'posts.html';
+    window.location.href = 'blog.html';
 })
