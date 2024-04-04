@@ -8,6 +8,14 @@ body {
   transition: var(--transition-delay);
   background-color: var(--background-color);
   color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 body.dark {
@@ -25,6 +33,11 @@ body.dark {
 .button-container {
   display: flex;
   margin-bottom: 10px;
+}
+
+.first-blog {
+  font-size: 20px;
+  font: bolder;
 }
 
 .back-button {
@@ -74,4 +87,13 @@ body.dark {
 
 body.dark .horizontal-line {
   background-color: var(--text-color); 
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+a {
+  color: var(--text-color);
 }
