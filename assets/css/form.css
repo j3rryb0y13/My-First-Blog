@@ -1,10 +1,19 @@
 .blog-post {
   border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
 }
 
-.blog-post {
-  text-decoration: underline;
+.blog-post h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+}
+
+.blog-post p {
+  padding-left: 20px;
+}
+
+.blog-post span {
+  color: grey;
 }

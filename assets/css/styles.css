@@ -1,5 +1,5 @@
 body {
-  --accent-color: orangered;
+  --accent-color: rgb(3, 78, 3);
   --background-color: white;
   --text-color: black;
   --button-text-color: var(--background-color);

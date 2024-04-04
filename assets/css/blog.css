@@ -1,5 +1,5 @@
 body {
-  --accent-color: orangered;
+  --accent-color: rgb(3, 78, 3);
   --background-color: white;
   --text-color: black;
   --button-text-color: var(--background-color);
@@ -92,6 +92,10 @@ body.dark .horizontal-line {
 .no-bullets {
   list-style-type: none;
   padding-left: 20px;
+}
+
+.no-bullets {
+  margin-bottom: 10px;
 }
 
 a {
