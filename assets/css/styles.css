@@ -4,22 +4,22 @@ body {
   --text-color: black;
   --button-text-color: var(--background-color);
   --transition-delay: .5s;
-
   transition: var(--transition-delay);
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
 body.dark {
-  --accent-color: #D0D066; 
+  --accent-color: #D0D066;
   --background-color: #333;
-  --text-color: white; 
+  --text-color: white;
 }
 
-.container {
+.header-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .theme-toggle-button {
@@ -28,14 +28,11 @@ body.dark {
   cursor: pointer;
   padding: .5em 1em;
   border-radius: .3em;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
   transition: var(--transition-delay);
   transform: scale(1);
-  margin-bottom: 5px;
-
   text-align: center;
-  line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,49 +41,54 @@ body.dark {
 .theme-toggle-button .icon {
   margin-right: .5em;
 }
+
 .theme-toggle-button:hover,
-.theme-toggle-button:focus{
+.theme-toggle-button:focus {
   transform: scale(1.1);
 }
 
 .horizontal-line {
   width: 100%;
-  height: 3px; 
-  background-color: var(--accent-color); 
-  margin-bottom: 2px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 5px 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh; /* You can adjust this value as needed */
+}
+
+.main-container {
+  width: 100%;
+  padding: 10px 20px;
 }
 
 body.dark .horizontal-line {
-  background-color: var(--text-color); 
+  background-color: var(--text-color);
 }
-
 /* Main Section Styles */
+
 main {
   display: flex;
-  height: 100vh;
   justify-content: center;
-  align-items: center; /* Align vertically */
+  align-items: center;
+  width: 100%;
 }
 
-/* Left and Right Section Styles */
 .left-section, .right-section {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Align items in the center of each section */
-  flex: 1; /* Each section takes equal space */
+  flex: 1;
+  padding: 20px;
 }
 
-/* Vertical Line Styles - if existing styles are suitable, keep them */
 .vertical-line {
   width: 5px;
-  height: 100%;
+  height: calc(100vh - 40px);
   background-color: var(--text-color);
-  margin: 0 20px; /* Increase margin for visual separation */
-}
-
-.word {
-  font-family: sans-serif;
-  perspective: 1000px;
+  margin: 0 20px; 
 }
 
 .word span {
@@ -222,25 +224,49 @@ main {
   }
 }
 
+.info, #blog-form {
+  width: 100%;
+  text-align: center;
+}
 
-/* Styles for the form */
 #blog-form {
-  max-width: 750px;
+  width: 100%; /* This will make the form's width match its parent container */
+  max-width: 750px; /* Adjust this value based on your preference */
   margin: auto; 
 }
 
 #blog-form input[type="text"],
 #blog-form textarea {
-  width: 100%; /* Full width of the form */
+  width: calc(100% - 20px); /* 100% width minus the padding */
   padding: 10px;
   margin: 8px 0;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box;
 }
 
 #blog-form button[type="submit"] {
-  width: 100%; /* Full width of the form */
+  width: calc(100% - 20px); /* 100% width minus the padding */
   padding: 10px;
   margin: 8px 0;
   box-sizing: border-box; 
   background-color: var(--accent-color);
+}
+
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+  }
 }
