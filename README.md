@@ -4,9 +4,7 @@
 
 # Mock-Up
 
-![Shown view of finished webpage with updates](./assets/images/Challenge%20#4%20Part1.png)
-
-![Shown view of finished webpage with updates](./assets/Images/Challenge%20#4%20Part2.png)
+![Shown view of finished webpage with updates](./assets/Images/Challenge%20#4%20Part1.png)
 
 # Deployed Applciation 
 
